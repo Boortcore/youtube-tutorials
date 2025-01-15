@@ -37,3 +37,18 @@ function createAsap() {
 }
 
 export const asap = createAsap();
+
+export class AggregateError extends Error {
+  constructor(message: string) {
+    super(message);
+  }
+}
+
+export const arrayRequeredMessage = 'The method of Promise requires an array';
+export const allPromisesRejectedMessage = 'All promises were rejected';
+
+export const Status  = {
+  PENDING: "pending" ,
+  FULFILLED: "fulfilled",
+  REJECTED: "rejected"
+} as const;
